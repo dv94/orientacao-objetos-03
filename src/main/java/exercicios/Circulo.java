@@ -4,9 +4,13 @@ public class Circulo {
     private Double raio;
     private Double PI = 3.141516;
 
+    public Circulo() { }
+
     public Circulo(Double raio){
         setRaio(raio);
     }
+
+
     public Double getPI(){
         return PI;
     }

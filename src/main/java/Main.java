@@ -1,11 +1,12 @@
 import exemplos.Conta;
 import exemplos.Quadrado;
+import exercicios.Circulo;
 
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Conta c1 = new Conta(1);
+       // Conta c1 = new Conta(1);
         Conta c2 = new Conta(2, 2000.00);
         Conta c3 = new Conta(3, 2000.00, 3000.00);
 
@@ -15,6 +16,12 @@ public class Main {
         Quadrado q1 = new Quadrado(20.0);
         System.out.println(q1.calcularArea());
         System.out.println(q1.calcularPerimetro());
+
+        //-----------------------------------------
+        Circulo c1 = new Circulo(10.0d);
+        System.out.println("O valor de circulo é: " + c1.calcularArea());
+        System.out.println("O valor do perimetrode  circulo é: "+ c1.calcularPerimentro());
+
     }
 }
 
