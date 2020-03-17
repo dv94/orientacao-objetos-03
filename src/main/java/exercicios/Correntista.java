@@ -1,25 +1,56 @@
 package exercicios;
 
+import jdk.dynalink.NamedOperation;
+
 public class Correntista {
     private Integer codigo;
     private String nome;
     private String email;
-    private Integer telefone;
+    private String telefone;
 
 
-    public Correntista(Integer codigo, String nome, String email, Integer telefone){
-        setCodigo(codigo);
+
+    public Correntista(Integer codigo){
+        this(codigo,"a", "a", "1");
+    }
+
+    public Correntista(Integer codigo, String nome){
+        this(codigo, nome, "a", "1");
+    }
+
+    public Correntista(Integer codigo, String nome, String email){
+        this(codigo, nome, email, "1");
+    }
+
+    public Correntista(Integer codigo, String nome, String email, String telefone){
+        getCodigo(codigo);
         setNome(nome);
         setEmail(email);
         setTelefone(telefone);
     }
 
+    public Correntista() {}
+
+    public static Correntista criarComNome(Integer codigo, String nome){
+        return new Correntista(codigo, nome);
+    }
+
+    public static Correntista criarComEmail(Integer codigo, String nome, String email){
+        return new Correntista(codigo, nome, email);
+    }
+
+    public static Correntista criarComTelefone(Integer codigo, String nome, String telefone){
+        return new Correntista(codigo, nome, telefone);
+    }
+
+
+    //--------------------------
     public String getCodigoCliente(){
         return this.codigo +","+ this.nome +","+ this.email +","+ this.telefone;
     }
 
 
-    public Integer getCodigo() {
+    public Integer getCodigo(int i) {
         return codigo;
     }
 
@@ -38,7 +69,7 @@ public class Correntista {
         this.nome = nome;
     }
 
-    public String getEmail() {
+    public String getEmail(String s) {
         return email;
     }
 
@@ -46,11 +77,11 @@ public class Correntista {
         this.email = email;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 }

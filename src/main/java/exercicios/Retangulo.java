@@ -8,7 +8,12 @@ public class Retangulo {
             setBase(base);
             setAltura(altura);
         }
-        public Double getBase() {
+
+    public Retangulo() {
+
+    }
+
+    public Double getBase() {
             return base;
         }
         public void setBase(Double base) {

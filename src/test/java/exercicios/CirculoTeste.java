@@ -22,9 +22,8 @@ public class CirculoTeste {
     // Construtor
     @Test
     public void contrutorValorValidodeRaio(){
-
+        assertEquals(c1.getRaio(), 15.00);
     }
-
 
     @Test
     public void criarObjetoConta(){
