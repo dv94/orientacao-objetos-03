@@ -1,7 +1,7 @@
 package exercicios;
 
 public class Circulo {
-    public Double raio;
+    private Double raio;
     private Double PI = 3.141516;
 
     public Circulo(Double raio){
@@ -17,7 +17,7 @@ public class Circulo {
 
     public void setRaio(Double raio) {
         if(raio <= 0){
-            throw new IllegalAccessException("O valor tem que ser maior que 0")
+            throw new IllegalArgumentException("O valor tem que ser maior que 0");
         }
         this.raio = raio;
     }
